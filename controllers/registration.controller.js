@@ -64,7 +64,7 @@ const updateRegistrations = async (req, res) => {
 
     const updateRegistration = await Registration.findOne({ where: { id } });
 
-    if (!record) {
+    if (!updateRegistration) {
         return res.status(404).json({
             status: 'Error',
             message: 'Record not found'
@@ -87,7 +87,7 @@ const cancelRegistrations = async (req, res) => {
 
     const cancel = await Registration.findOne({ where: { id } });
 
-    if (!record) {
+    if (!cancel) {
         return res.status(404).json({
             status: 'Error',
             message: 'Record not found'

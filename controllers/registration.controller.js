@@ -40,7 +40,6 @@ const createRegistrations = async (req, res) => {
         const { entranceTime, exitTime, status } = req.body
         const newRegistration = await Registration.create({
             entranceTime,
-            exitTime,
             status
         });
 

@@ -37,7 +37,7 @@ const getRegistrations = async (req, res) => {
 // Create a new record (stamp the entry time)
 const createRegistrations = async (req, res) => {
     try {
-        const { entranceTime, exitTime, status } = req.body
+        const { entranceTime } = req.body
         const newRegistration = await Registration.create({
             entranceTime
         });

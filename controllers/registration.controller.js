@@ -39,8 +39,7 @@ const createRegistrations = async (req, res) => {
     try {
         const { entranceTime, exitTime, status } = req.body
         const newRegistration = await Registration.create({
-            entranceTime,
-            status
+            entranceTime
         });
 
         res.status(201).json({
